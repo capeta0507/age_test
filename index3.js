@@ -84,7 +84,7 @@ const day31 = [
 	}
 	// 年份寫入
 	const yeraStart = '1920';
-	const yearEnd = '2020';
+	const yearEnd = new Date().getFullYear().toString();
 
 	for(let x=yearEnd;x>yeraStart-1;x--){
 		$("#myYear").append(`<option value=${x}>${x}</option>`);
