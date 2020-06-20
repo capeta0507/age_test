@@ -86,7 +86,7 @@ const day31 = [
 	const yeraStart = '1920';
 	const yearEnd = '2020';
 
-	for(let x=yearEnd;x>yeraStart;x--){
+	for(let x=yearEnd;x>yeraStart-1;x--){
 		$("#myYear").append(`<option value=${x}>${x}</option>`);
 	} 
 	for(let x=0;x<monthOptions.length;x++){
