@@ -1,50 +1,50 @@
 // select option
 const monthOptions = [
-    { value: '01', label: '01', day: 31},
-    { value: '02', label: '02', day: 28},
-    { value: '03', label: '03', day: 31},
-    { value: '04', label: '04', day: 30},
-    { value: '05', label: '05', day: 31},
-    { value: '06', label: '06', day: 30},
-    { value: '07', label: '07', day: 31},
-    { value: '08', label: '08', day: 31},
-    { value: '09', label: '09', day: 30},
-    { value: '10', label: '10', day: 31},
-    { value: '11', label: '11', day: 30},
-    { value: '12', label: '12', day: 31},
+	{ value: '01', label: '01', day: 31},
+	{ value: '02', label: '02', day: 28},
+	{ value: '03', label: '03', day: 31},
+	{ value: '04', label: '04', day: 30},
+	{ value: '05', label: '05', day: 31},
+	{ value: '06', label: '06', day: 30},
+	{ value: '07', label: '07', day: 31},
+	{ value: '08', label: '08', day: 31},
+	{ value: '09', label: '09', day: 30},
+	{ value: '10', label: '10', day: 31},
+	{ value: '11', label: '11', day: 30},
+	{ value: '12', label: '12', day: 31},
 ]; 
 const day31 = [
-    { value: '01', label: '01'},
-    { value: '02', label: '02'},
-    { value: '03', label: '03'},
-    { value: '04', label: '04'},
-    { value: '05', label: '05'},
-    { value: '06', label: '06'},
-    { value: '07', label: '07'},
-    { value: '08', label: '08'},
-    { value: '09', label: '09'},
-    { value: '10', label: '10'},
-    { value: '11', label: '11'},
-    { value: '12', label: '12'},
-    { value: '13', label: '13'},
-    { value: '14', label: '14'},
-    { value: '15', label: '15'},
-    { value: '16', label: '16'},
-    { value: '17', label: '17'},
-    { value: '18', label: '18'},
-    { value: '19', label: '19'},
-    { value: '20', label: '20'},
-    { value: '21', label: '21'},
-    { value: '22', label: '22'},
-    { value: '23', label: '23'},
-    { value: '24', label: '24'},
-    { value: '25', label: '25'},
-    { value: '26', label: '26'},
-    { value: '27', label: '27'},
-    { value: '28', label: '28'},
-    { value: '29', label: '29'},
-    { value: '30', label: '30'},
-    { value: '31', label: '31'}
+	{ value: '01', label: '01'},
+	{ value: '02', label: '02'},
+	{ value: '03', label: '03'},
+	{ value: '04', label: '04'},
+	{ value: '05', label: '05'},
+	{ value: '06', label: '06'},
+	{ value: '07', label: '07'},
+	{ value: '08', label: '08'},
+	{ value: '09', label: '09'},
+	{ value: '10', label: '10'},
+	{ value: '11', label: '11'},
+	{ value: '12', label: '12'},
+	{ value: '13', label: '13'},
+	{ value: '14', label: '14'},
+	{ value: '15', label: '15'},
+	{ value: '16', label: '16'},
+	{ value: '17', label: '17'},
+	{ value: '18', label: '18'},
+	{ value: '19', label: '19'},
+	{ value: '20', label: '20'},
+	{ value: '21', label: '21'},
+	{ value: '22', label: '22'},
+	{ value: '23', label: '23'},
+	{ value: '24', label: '24'},
+	{ value: '25', label: '25'},
+	{ value: '26', label: '26'},
+	{ value: '27', label: '27'},
+	{ value: '28', label: '28'},
+	{ value: '29', label: '29'},
+	{ value: '30', label: '30'},
+	{ value: '31', label: '31'}
 ]
 // 年份修改
   function changeYear() {
@@ -105,25 +105,17 @@ const day31 = [
     var birthMonth = parseInt($('#myMonth').val());
 		var birthDate = parseInt($('#myDate').val());
 		var yearDiff = nowYear - birthYear;
-		var myAge = nowYear - birthYear;
 		if(yearDiff < 18){
-			$('#myAge').html(myAge);
 			alert('您還未滿18歲唷！');
       return false ;
 		}
 		if(yearDiff === 18 && nowMonth < birthMonth){
-			myAge = myAge - 1
-			$('#myAge').html(myAge);
       alert('您還未滿18歲唷！');
       return false ;
     }
     if(yearDiff === 18 && nowMonth === birthMonth && nowDay < birthDate){
-			myAge = myAge - 1
-			$('#myAge').html(myAge);
       alert('您還未滿18歲唷！');
       return false ;
 		}
-		// alert('您現在' + myAge + '歲')
-		$('#myAge').html(myAge);
 		alert('您已18歲了');
 })
